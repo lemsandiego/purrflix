@@ -5,7 +5,6 @@ import { useSearchParams } from "react-router-dom";
 export const Search = ({ apiPath }) => {
   const [searchParams] = useSearchParams();
   const queryTerm = searchParams.get("q");
-  console.log(queryTerm);
   const { data: movies } = useFetch({ apiPath: apiPath, queryTerm: queryTerm });
  
   return (

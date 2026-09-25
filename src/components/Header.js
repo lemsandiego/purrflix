@@ -13,7 +13,6 @@ export const Header = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();  
-    console.log(e);
     const value = e.target.search.value;
     
     if (value.trim() === "") {
