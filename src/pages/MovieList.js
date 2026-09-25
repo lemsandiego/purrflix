@@ -8,9 +8,9 @@ export const MovieList = ({ apiPath }) => {
     <main>
       <section className="max-w-7xl mx-auto py-7">
         <div className="flex justify-center flex-wrap gap-5">
-          {movies.map((movie) => (
+          { movies?.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />
-          ))}
+          )) }
       
           <nav aria-label="Page navigation example">
             <ul className="inline-flex -space-x-px text-sm">
