@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-export const PageNotFound = () => {
+import { usePageTitle } from "../hooks/usePageTitle";
+
+export const PageNotFound = ({ pageTitle}) => {
+  usePageTitle(pageTitle);
+
   return (
     <main>
       <section className="flex flex-col items-center justify-center h-screen gap-5">

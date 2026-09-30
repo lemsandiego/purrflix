@@ -1,12 +1,14 @@
 import { MovieCard } from "../components";
 import { useFetch } from "../hooks/useFetch.js";
+import { usePageTitle } from "../hooks/usePageTitle.js";
 import { useSearchParams } from "react-router-dom";
 
 export const Search = ({ apiPath }) => {
   const [searchParams] = useSearchParams();
   const queryTerm = searchParams.get("q");
   const { data: movies } = useFetch({ apiPath: apiPath, queryTerm: queryTerm });
- 
+  usePageTitle(`Search results for ${queryTerm}`);
+
   return (
     <main>
       <section className="max-w-7xl mx-auto py-7">
